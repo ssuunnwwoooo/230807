@@ -1,0 +1,359 @@
+:root {
+    --mc: #a73b59;
+    --bg: #f0f1f3;
+    --pc: #e89b15;
+}
+
+body {
+    background: #a5a5a5;
+}
+
+.header {
+    position: fixed;
+    inset: 0 0 0 0;
+    height: 100px;
+    z-index: 9999;
+}
+
+.header_wrap {
+    display: flex;
+    justify-content: space-around;
+    height: 100px;
+    align-items: center;
+    position: relative;
+
+    border-bottom: 1px solid #ddd;
+}
+
+.header_wrap .logo {
+    margin-top: 35px;
+    z-index: 1;
+}
+
+.header_wrap .gnb {}
+
+
+.header_wrap .gnb>ul {
+    display: flex;
+    gap: 30px;
+    font-size: 20px;
+}
+
+.header_wrap .gnb>ul>li {
+    padding: 38px 20px;
+    border: 1px solid red;
+}
+
+.header_wrap .link {
+    display: flex;
+    gap: 30px;
+    font-size: 18px;
+    align-items: center;
+}
+
+.header_wrap .link .list {
+    font-size: 40px;
+}
+
+.header_wrap .sub {
+    position: absolute;
+    display: flex;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    background: #fff;
+
+    visibility: hidden;
+    opacity: 0;
+}
+
+.header_wrap .gnb>ul>li:hover .sub {
+    opacity: 1;
+    visibility: visible;
+}
+
+.header_wrap .sub .title {
+    font-size: 30px;
+    font-weight: 700;
+    padding: 43px 0;
+    color: var(--mc);
+}
+
+.header_wrap .sub ul {
+    position: relative;
+}
+
+.header_wrap .sub ul~ul::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 100%;
+    background: #ddd;
+}
+
+.header_wrap .right>li>a {
+    position: relative;
+    display: block;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 15px 20px;
+    border: 1px solid #ddd;
+    color: #666;
+    overflow: hidden;
+    transition: all .2s;
+}
+
+.header_wrap .right>li>a::before {
+    position: absolute;
+    content: "\f285";
+    top: 30%;
+    right: 5%;
+    font-family: bootstrap-icons;
+    color: #fff;
+}
+
+.header_wrap .right>li>a:hover {
+    background: #a73b59;
+    color: #fff;
+}
+
+.header_wrap .cub {
+    background: var(--bg);
+}
+
+.header_wrap .cub li {
+    position: relative;
+    padding: 15px 30px;
+    font-size: 18px;
+    line-height: 15px;
+    color: #666;
+}
+
+.header_wrap .cub li::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 5%;
+    width: 3px;
+    height: 3px;
+    background: #c7c7c7;
+    border-radius: 50%;
+}
+
+.header_wrap .cub li:hover {
+    color: var(--mc);
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.header_wrap .one {
+    display: flex;
+    justify-content: center;
+}
+
+
+.header_wrap .one .one_left {
+    padding: 0 30px;
+}
+
+.header_wrap .one .one_left p {
+    font-size: 25px;
+    margin: 0 0 35px 0;
+}
+
+.header_wrap .one .one_left input[type="text"] {
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 15px;
+    padding: 15px 20px;
+}
+
+.header_wrap .one .one_left button {
+    background: var(--pc);
+    border: none;
+    font-size: 15px;
+    padding: 15px;
+    color: #fff;
+}
+
+.header_wrap .one .one_right {
+    display: flex;
+    text-align: center;
+}
+
+.header_wrap .one_right li {
+    padding: 50px 30px;
+}
+
+
+.header_wrap .one_right li:hover {
+    background: var(--mc);
+}
+
+
+.header_wrap .one li {
+    position: relative;
+}
+
+.header_wrap .one li~li::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 100%;
+    background: #ddd;
+}
+
+.header_wrap .one_right img {
+    display: block;
+    overflow: visible;
+    height: 110px;
+    margin-bottom: 20px;
+    padding: 30px;
+    background: var(--bg);
+    border: 1px solid #ddd;
+    border-radius: 50%;
+}
+
+.header_wrap .one_right p {
+    font-size: 25px;
+}
+
+.header_wrap .two {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.header_wrap .two_left {
+    padding: 0 15px;
+    width: 25%;
+}
+
+.header_wrap .two_left p {
+    font-size: 25px;
+    margin: 0 0 35px 0;
+}
+
+.header_wrap .two_left i {
+    font-size: 20px;
+    padding: 8px 12px;
+    background: var(--bg);
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    margin: 0 5px 0 0;
+}
+
+.header_wrap .two_left input {
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 15px;
+    padding: 15px 20px;
+    width: 40%;
+
+    margin: 0 0 30px 0;
+}
+
+.header_wrap .two_left input[type="text"] {
+    margin-left: -6px;
+    width: 40%;
+}
+
+.header_wrap .two_left button {
+    background: var(--pc);
+    border: none;
+    font-size: 15px;
+    padding: 15px;
+    color: #fff;
+}
+
+.header_wrap .two_left .btn {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    gap: 30px;
+    margin: 0 0 30px 0;
+}
+
+.header_wrap .two_left .btn a {
+    color: #666;
+    padding: 15px 0;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+}
+
+.header_wrap .two_left .btn a:hover {
+    border: 1px solid var(--mc);
+    color: var(--mc);
+    font-weight: 600;
+}
+
+.header_wrap .two_left span {
+    display: block;
+    text-align: center;
+    font-size: 17px;
+    padding: 15px;
+    background: var(--bg);
+    margin: 0 0 30px 0;
+}
+
+.header_wrap .two_left .tw_icon {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin: 0 0 15px 0;
+}
+
+.header_wrap .two_left .tw_icon a {
+    position: relative;
+}
+
+.header_wrap .two_left .tw_icon a~a::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: -25px;
+    width: 1px;
+    height: 100%;
+    background: #ddd;
+}
+
+.header_wrap .two_left .tw_icon a img {
+    text-align: center;
+    margin-bottom: 20px;
+    transition: 0.4s;
+}
+
+.header_wrap .two_left .tw_icon a:hover img {
+    transform: rotateY(180deg);
+}
+
+.header_wrap .two_left .tw_icon p {
+    display: block;
+    font-size: 18px;
+}
+
+
+.header_wrap .two_right {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    padding: 43px 35px;
+}
+
+
+.header_wrap .three {
+    gap: 30px;
+    justify-content: center;
+}
+
+.header_wrap .three .three_right {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.header_wrap .four {}
