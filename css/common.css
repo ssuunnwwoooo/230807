@@ -32,14 +32,11 @@ body {
 }
 
 .sec {
-    padding: 50px;
-}
-
-.sec .tit {
-    max-width: 1200px;
+    max-width: 1700px;
     margin: 0 auto;
     padding: 0 15px;
 }
+
 
 .bg {
     background: #f9f9f9;
