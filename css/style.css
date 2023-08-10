@@ -1468,7 +1468,7 @@ body::after {
         top: 0;
         inset: 0 0 0 0;
         height: 100vh;
-        background: var(--mc);
+        background: var(--bg);
         z-index: 10000;
 
         visibility: hidden;
@@ -1485,7 +1485,7 @@ body::after {
         font-size: 20px;
         /* r */
         flex-direction: column;
-        height: 85%;
+        gap: 30px;
     }
 
 
@@ -1494,17 +1494,21 @@ body::after {
         /* r */
         position: relative;
         text-align: center;
-        border: 2px solid #000;
         padding: 0;
         margin: 20px 0 0 0;
-        color: #fff;
+        color: #000000;
+    }
+
+    .header_wrap .gnb>ul>li>a {
+        border: 1px solid blue;
+
     }
 
     .header_wrap .gnb>ul>li:hover {
         color: var(--mc);
         font-weight: 700;
         /* r */
-        color: #fff;
+        color: #000000;
         font-weight: initial;
     }
 
@@ -1551,7 +1555,6 @@ body::after {
         box-shadow: none;
         opacity: 1;
         visibility: visible;
-        border: 1px solid red;
         transform: translate(0, 0);
         padding: 0 15px;
     }
@@ -1628,7 +1631,7 @@ body::after {
         top: 0;
         background: var(--bg);
         /* r */
-        padding: 20px 0;
+        display: none;
     }
 
     .header_wrap .cub li {
@@ -1681,6 +1684,8 @@ body::after {
     .header_wrap .one_right li {
         padding: 50px 30px;
         /* r */
+        padding: 30px 0;
+
     }
 
 
@@ -1712,6 +1717,8 @@ body::after {
         font-size: 25px;
         /* r */
         font-size: 18px;
+        font-weight: 500;
+        color: #666;
     }
 
     .header_wrap .two {
@@ -1733,6 +1740,8 @@ body::after {
         /* r */
         display: flex;
         flex-direction: column;
+        padding: 0;
+        gap: 15px;
     }
 
 
