@@ -5,30 +5,26 @@ $(function () {
         navigation: true,
         showActiveTooltip: true,
         scrollOverflow: true,
-        /*     afterRender: function () {
-                $('.header').eq(0).addClass('on')
-            },
-    
-            afterLoad: function (lnk, idx) {
-                console.log(lnk, idx);
-                $('.main .section').eq(idx - 1).addClass('on').siblings().removeClass('on');
-            },
-     */
+
         afterLoad: function (anchorLink, index) {
             if (index == 1) {
                 $('.header').eq(0).removeClass('on')
                 $('.header').eq(0).removeClass('in')
+                $('.mopen').eq(0).removeClass('on')
             }
             if (index == 2) {
                 $('.header').eq(0).addClass('on')
                 $('.header').eq(0).removeClass('in')
+                $('.mopen').eq(0).addClass('on')
             }
             if (index == 3) {
                 $('.header').eq(0).removeClass('on')
                 $('.header').eq(0).removeClass('in')
+                $('.mopen').eq(0).removeClass('on')
             }
             if (index == 4) {
                 $('.header').eq(0).addClass('in')
+                $('.mopen').eq(0).addClass('on')
             }
         },
 
@@ -56,11 +52,22 @@ $(function () {
 
     const snsSlide = new Swiper(".sns_slide", {
         spaceBetween: 1,
-        slidesPerView: 3,
+        slidesPerView: 1,
         centeredSlides: true,
         roundLengths: true,
         loop: true,
         loopAdditionalSlides: 30,
+
+        breakpoints: {
+            768: {
+                slidesPerView: 1,
+            },
+            1024: {
+                slidesPerView: 3,
+                spaceBetween: 50,
+            },
+        },
+
         on: {
             init: function () {
                 SLIDE_NUM.innerHTML = this.realIndex + 1;
@@ -70,7 +77,10 @@ $(function () {
                 SLIDE_NUM.innerHTML = this.realIndex + 1;
                 SLIDE_NUM_T.innerHTML = this.slides.length;
             }
-        }
+        },
+
+
+
     });
 
     $('.main_sns .arrows .left').on('click', function () {
@@ -93,4 +103,29 @@ $(function () {
 
     });
 
+
+
+
+    $('.mopen').on('click', function () {
+        $(this).toggleClass('on');
+        $('.gnb').toggleClass('on');
+    });
+
+    $('.gnb>ul>li>a').on('click', function (e) {
+        if ($('.gnb').hasClass('on')) {
+            e.preventDefault();
+        }
+
+        $(this)
+            .next()
+            .stop()
+            .slideToggle();
+        $(this)
+            .parent()
+            .siblings()
+            .find('.sub')
+            .stop()
+            .slideUp();
+
+    });
 })
