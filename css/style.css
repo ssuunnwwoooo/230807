@@ -1410,7 +1410,7 @@ body::after {
     }
 
     .header_wrap .sec .logo {
-        z-index: 1;
+        z-index: 99999;
     }
 
     .header_wrap .sec .lo_r {
@@ -1468,7 +1468,7 @@ body::after {
         top: 0;
         inset: 0 0 0 0;
         height: 100vh;
-        background: var(--bg);
+        background: var(--mc);
         z-index: 10000;
 
         visibility: hidden;
@@ -1485,7 +1485,9 @@ body::after {
         font-size: 20px;
         /* r */
         flex-direction: column;
-        gap: 30px;
+
+        padding-top: 120px;
+        border: 1px solid green;
     }
 
 
@@ -1494,22 +1496,23 @@ body::after {
         /* r */
         position: relative;
         text-align: center;
-        padding: 0;
-        margin: 20px 0 0 0;
-        color: #000000;
+        color: #a73b59;
+background: var(--bg);
+font-weight: 700;
     }
 
     .header_wrap .gnb>ul>li>a {
-        border: 1px solid blue;
-
+        display: block;
+        padding: 10px 0;
+        width: 100%;
+        border-bottom: 1px solid #ddd;
     }
 
     .header_wrap .gnb>ul>li:hover {
         color: var(--mc);
         font-weight: 700;
         /* r */
-        color: #000000;
-        font-weight: initial;
+        color: #a73b59;
     }
 
     .header_wrap .link .login,
@@ -1593,7 +1596,7 @@ body::after {
     }
 
     .header_wrap .right>li {
-        border-bottom: 1px solid #ddd;
+
     }
 
     .header_wrap .right>li>a {
@@ -1610,7 +1613,7 @@ body::after {
         font-size: 18px;
         transition: none;
         border: none;
-        padding: 20px 0;
+        padding: 15px 0;
     }
 
     .header_wrap .right>li>a::before {
