@@ -1486,8 +1486,7 @@ body::after {
         /* r */
         flex-direction: column;
 
-        padding-top: 120px;
-        border: 1px solid green;
+        padding-top: 80px;
     }
 
 
@@ -1497,8 +1496,8 @@ body::after {
         position: relative;
         text-align: center;
         color: #a73b59;
-background: var(--bg);
-font-weight: 700;
+        background: var(--bg);
+        font-weight: 700;
     }
 
     .header_wrap .gnb>ul>li>a {
@@ -1595,9 +1594,7 @@ font-weight: 700;
         flex-direction: column;
     }
 
-    .header_wrap .right>li {
-
-    }
+    .header_wrap .right>li {}
 
     .header_wrap .right>li>a {
         position: relative;
@@ -1703,7 +1700,7 @@ font-weight: 700;
     .header_wrap .one li {
         position: relative;
         /* r */
-        border-bottom: 1px solid #ddd;
+
     }
 
     .header_wrap .one li~li::before {
