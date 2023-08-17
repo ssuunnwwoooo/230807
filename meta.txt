@@ -1,0 +1,75 @@
+*
+<meta name="google-site-verification" content="W1Qw1WlPoGdO_XarST3eMbXVQqg5ZdmnPC6uMVdokwQ">
+
+-<meta name="google-site-verification" content="..." />	사이트의 최상위 페이지에서 이 태그를 사용하여 Search Console에 대한 소유권을 확인할 수 있습니다. 'name' 및 'content' 속성의 값(대소문자 포함)이 제공되는 기능과 정확하게 일치해야 하지만, XHTML에서 HTML로 태그를 변경하거나 태그의 형식이 페이지 형식과 일치하는지는 상관 없습니다. 추가 정보
+
+*
+<meta name="robots" content=""> / ex- <meta name="robots" content="noindex, nofollow" />
+-검색 로봇 제어
+-noindex : 검색 결과에 이 페이지를 표시 하지 않는다
+-nofollow : 이 페이지의 링크를 따라가지 않는다
+-noarchive : 검색결과에 저장된 페이지 링크를 표시하지 않는다.
+
+index : 그 페이지를 수집대상으로 한다.
+Follow : 그 페이지를 포함해 링크가 걸린 곳을 수집대상으로 한다.
+
+
+*
+<meta name="description" content="">
+-검색 결과에 표시되는 문자 지정
+content에 표시하고싶은 문장을 쓰면 된다.
+
+
+*
+<meta property="og:type" content="article">
+- 이 콘텐츠의 미디어 유형. 콘텐츠가 피드에 표시되는 방식에 영향을 미침. 기본값은 website.
+
+
+-----------------------------------------------------------------------------------------------------
+↓  naver 블로그 , 카카오톡 미리보기 설정 ↓
+
+<meta property="og:title" content="콘텐츠 제목" /> 
+<meta property="og:url" content="웹페이지 URL" />
+<meta property="og:type" content="웹페이지 타입(blog, website 등)" />
+<meta property="og:image" content="표시되는 이미지" /> 
+<meta property="og:description" content="웹페이지 설명" />
+
+
+
+ex ↓
+
+<meta property="og:title" content="부산홈페이지제작 다름">
+<meta property="og:url" content="http://darm.kr/">
+<meta property="og:type" content="article">
+<meta property="og:image" content="http://darm.kr/theme/darm/dimg/logo.png">
+<meta property="og:description" content="부산홈페이지제작 부산홈페이지 유지 관리 보수 전문 업체, 합리적인 견적과 빠른 제작, 20년 전통의 부산홈페이지제작 전문 업체">
+-----------------------------------------------------------------------------------------------------
+
+
+↓ 트위터 미리보기 설정 ↓
+
+<meta name="twitter:card" content="트위터 카드 타입(요약정보, 사진, 비디오)" /> 
+<meta name="twitter:title" content="콘텐츠 제목" /> 
+<meta name="twitter:description" content="웹페이지 설명" /> 
+<meta name="twitter:image" content="표시되는 이미지 " />
+
+
+ex ↓
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="부산홈페이지제작 다름">
+<meta name="twitter:description" content="부산홈페이지제작 부산홈페이지 유지 관리 보수 전문 업체, 합리적인 견적과 빠른 제작, 20년 전통의 부산홈페이지제작 전문 업체">
+<meta name="twitter:url" content="http://darm.kr/">
+<meta name="twitter:image" content="http://darm.kr/theme/darm/dimg/logo.png">
+
+
+-----------------------------------------------------------------------------------------------------
+
+<meta http-equiv="imagetoolbar" content="no">
+- 그림위에 마우스 오버시 이미지 관련 툴바가 생기지 않도록 정의합니다.
+[출처] [HTML] 메타 태그|작성자 Simpolor
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+IE=edge - 모든 IE 브라우저에 호환성보기를 무시해줍니다.
+IE=Edge; chrome=1 - Chromeframe을 사용하는 유저에게 렌더링합니다.
